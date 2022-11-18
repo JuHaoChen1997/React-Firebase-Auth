@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 import ForgotPassword from "./ForgotPassword";
 import UpdateProfile from "./UpdateProfile";
 import DisplayDB from "./DisplayDB";
+// import UpdateUserInfo from "./UpdateUserInfo";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
               <Route path="/login" component={Login} />
               <Route path="/forgot-password" component={ForgotPassword} />
               <Route path="/display-database" component={DisplayDB} />
+              {/* <Route path="/update-user-info" component={UpdateUserInfo} /> */}
             </Switch>
           </AuthProvider>
         </Router>

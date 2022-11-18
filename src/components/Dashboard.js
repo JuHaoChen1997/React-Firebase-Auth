@@ -33,6 +33,9 @@ export default function Dashboard() {
           <Link to="/display-database" className="btn btn-primary w-100 mt-3">
             Display database
           </Link>
+          <Link to="/update-user-info" className="btn btn-primary w-100 mt-3">
+            update user info
+          </Link>
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
