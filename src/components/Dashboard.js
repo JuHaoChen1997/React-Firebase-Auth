@@ -1,21 +1,21 @@
-import React, { useState } from "react"
-import { Card, Button, Alert } from "react-bootstrap"
-import { useAuth } from "../contexts/AuthContext"
-import { Link, useHistory } from "react-router-dom"
+import React, { useState } from "react";
+import { Card, Button, Alert } from "react-bootstrap";
+import { useAuth } from "../contexts/AuthContext";
+import { Link, useHistory } from "react-router-dom";
 
 export default function Dashboard() {
-  const [error, setError] = useState("")
-  const { currentUser, logout } = useAuth()
-  const history = useHistory()
+  const [error, setError] = useState("");
+  const { currentUser, logout } = useAuth();
+  const history = useHistory();
 
   async function handleLogout() {
-    setError("")
+    setError("");
 
     try {
-      await logout()
-      history.push("/login")
+      await logout();
+      history.push("/login");
     } catch {
-      setError("Failed to log out")
+      setError("Failed to log out");
     }
   }
 
@@ -29,6 +29,10 @@ export default function Dashboard() {
           <Link to="/update-profile" className="btn btn-primary w-100 mt-3">
             Update Profile
           </Link>
+          {/* my code for test */}
+          <Link to="/display-database" className="btn btn-primary w-100 mt-3">
+            Display database
+          </Link>
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
@@ -37,5 +41,5 @@ export default function Dashboard() {
         </Button>
       </div>
     </>
-  )
+  );
 }
